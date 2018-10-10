@@ -5,22 +5,33 @@ using UnityEngine.AI;
 
 public class MoveDestination : MonoBehaviour {
     public Transform goal;
+    public bool follow;
+    private NavMeshAgent agent;
 
     void Start()
     {
-        StartCoroutine(Move(goal.position));
+        follow = true;
+        Move(goal.position);
+        //StartCoroutine(Move(goal.position));
+        
     }
 
-    IEnumerator Move (Vector3 position)
+    void Move (Vector3 position)
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        
-        while (gameObject.activeInHierarchy)
+        agent = GetComponent<NavMeshAgent>();
+        agent.destination = position;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Goal")
         {
-            agent.destination = position;
-            yield return new WaitForFixedUpdate();
+            print("You made it!");
+            follow = false;
+            agent.destination = this.transform.position;
         }
     }
+
 }
 
 

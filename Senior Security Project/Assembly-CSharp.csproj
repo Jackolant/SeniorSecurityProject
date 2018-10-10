@@ -61,7 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\GenerateGrid.cs" />
     <Compile Include="Assets\Scripts\MoveDestination.cs" />
+    <Compile Include="Assets\Scripts\ToggleSelection.cs" />
+    <None Include="Assets\Materials\Outliner.shader" />
+    <None Include="Assets\Materials\Wireframe.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/UVU/Fall 2018/DGM 4310 - Senior Project I/SeniorSecurityProject/Senior Security Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
