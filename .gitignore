@@ -32,7 +32,7 @@ sysinfo.txt
 .consulo/
 /.tmp
 /.svd
- 
+Assembly-CSharp.csproj
 # ============ #
 # OS generated #
 # ============ #
