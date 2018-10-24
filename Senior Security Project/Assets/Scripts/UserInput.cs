@@ -14,6 +14,7 @@ public class UserInput : MonoBehaviour {
     private bool isPanning;
 
 
+
     // Use this for initialization
     void Start () {
 		

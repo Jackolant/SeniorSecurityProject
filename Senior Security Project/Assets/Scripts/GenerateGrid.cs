@@ -25,5 +25,10 @@ public class GenerateGrid : MonoBehaviour {
                 gridList.Add(temp);
             }
         }
+        for (int k = 0; k < gridList.Count; k++)
+        {
+            gridList[k].name = "Zone " + (k + 1);
+            gridList[k].GetComponent<ZoneAnalysis>().ZoneName = "Zone " + (k + 1);
+        }
     }
 }
