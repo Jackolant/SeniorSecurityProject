@@ -19,6 +19,11 @@ public class SelectZone : MonoBehaviour
     public List<float> doors = new List<float>();
 
     public GameObject Zone_Info_Plane;
+    public Slider threat_level_slider;
+    public Text threat_level_number;
+    public Text guard_number;
+    public Text window_number;
+    public Text door_amount;
 
 
     // Use this for initialization
@@ -66,6 +71,16 @@ public class SelectZone : MonoBehaviour
     {
         currentZone = passed_zone;
         zoneMenu.text = passed_zone.GetComponent<ZoneAnalysis>().ZoneName;
+        threat_level_slider.value = currentZone.GetComponent<ZoneAnalysis>().threatLevel;
+        threat_level_number.text = currentZone.GetComponent<ZoneAnalysis>().threatLevel.ToString();
+        guard_number.text = currentZone.GetComponent<ZoneAnalysis>().number_guards.ToString();
+        window_number.text = currentZone.GetComponent<ZoneAnalysis>().windows.ToString();
+        door_amount.text = currentZone.GetComponent<ZoneAnalysis>().doors.ToString();
     }
 
+    public void adjustZoneThreatLevel()
+    {
+        currentZone.GetComponent<ZoneAnalysis>().threatLevel = threat_level_slider.value;
+        writeZoneInfo(currentZone);
+    }
 }
