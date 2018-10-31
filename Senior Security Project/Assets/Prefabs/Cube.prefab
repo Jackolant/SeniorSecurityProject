@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65856003711359662}
   - component: {fileID: 114999318243087758}
   - component: {fileID: 114204618522810988}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1147175507164230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.01, z: 1}
+  m_LocalScale: {x: 10, y: 3, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,7 +109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61847c17354bdc742857aa34ce003d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ZoneName: zone
   threatLevel: 100
+  number_guards: 0
+  times_assialant_passed_through: 0
+  windows: 0
+  doors: 0
 --- !u!114 &114999318243087758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,3 +130,4 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c66bfdff1b1a244468bd8446f7534673, type: 2}
   - {fileID: 2100000, guid: c1132a4b0bc32f741af3667cf746ed6d, type: 2}
   rend: {fileID: 23809241563742688}
+  select_zone: {fileID: 0}
