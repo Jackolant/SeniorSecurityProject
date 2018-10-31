@@ -18,8 +18,8 @@ public class GenerateGrid : MonoBehaviour {
         {
             for (var j = 0; j < gridWidth; j++)
             {
-                float x = (float)(v3Center.x - gridHeight / 2.0 + i);
-                float z = (float)(v3Center.z - gridWidth / 2.0 + j);
+                float x = (float)(v3Center.x - gridHeight / 2.0 + i) * goPrefab.transform.localScale.x;
+                float z = (float)(v3Center.z - gridWidth / 2.0 + j) * goPrefab.transform.localScale.z;
                 GameObject temp = Instantiate(goPrefab, new Vector3(x, 0, z), Quaternion.identity);
                 temp.transform.parent =this.gameObject.transform;
                 gridList.Add(temp);
